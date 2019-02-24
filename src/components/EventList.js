@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import EventListItem from './EventListItem';
 
 const EventList = (props) => (
     <table className="table table-bordered">
@@ -11,20 +12,8 @@ const EventList = (props) => (
             </tr>
         </thead>
         <tbody>
-            {props.events && props.events.map(e => (
-                <tr key={e.id} >
-                    <td>
-                        <span className="alert" style={{ background: e.category }}>
-                            {e.label}
-                        </span>
-                    </td>
-                    <td>
-                        {e.start}
-                    </td>
-                    <td>
-                        {e.end}
-                    </td>
-                </tr>
+            {props.events && props.events.map(event => (
+                <EventListItem key={event.id} {...event} />
             ))}
         </tbody>
     </table>
