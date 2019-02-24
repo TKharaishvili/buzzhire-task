@@ -1,16 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import EventList from './EventList';
 
-const EventsPage = (props) => (
+const EventsPage = () => (
     <div>
-        {props.next}
+        <EventList />
     </div>
 );
 
-const mapStateToProps = state => {
-    return {
-        next: state.eventData.next
-    };
-};
-
-export default connect(mapStateToProps)(EventsPage);
+export default EventsPage;
