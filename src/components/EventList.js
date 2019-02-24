@@ -30,10 +30,10 @@ const EventList = (props) => (
     </table>
 );
 
-const mapStateToProps = (state) => {
-    return ({
+const mapStateToProps = state => {
+    return {
         events: state.eventData.results
-    });
+    };
 };
 
 export default connect(mapStateToProps)(EventList);

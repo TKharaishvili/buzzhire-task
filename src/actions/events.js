@@ -7,8 +7,8 @@ const loadEvents = result => ({
     result
 });
 
-export const startLoadEvents = () => (dispatch) => {
-    return axios.get(apiUrl).then(resp => {
+export const startLoadEvents = (url = apiUrl) => (dispatch) => {
+    return axios.get(url).then(resp => {
         dispatch(loadEvents(resp.data));
     });
 }
