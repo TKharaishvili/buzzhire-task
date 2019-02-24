@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 const EventListItem = props => (
     <tr>
@@ -8,10 +9,10 @@ const EventListItem = props => (
             </span>
         </td>
         <td>
-            {props.start}
+            {moment(props.start).format('MMMM Do, YYYY HH:mm')}
         </td>
         <td>
-            {props.end}
+            {moment(props.end).format('MMMM Do, YYYY HH:mm')}
         </td>
     </tr>
 );
