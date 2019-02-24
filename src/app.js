@@ -5,6 +5,7 @@ import Header from './components/Header';
 import EventsPage from './components/EventsPage';
 import configureStore from './store/configureStore';
 import { startLoadEvents } from './actions/events';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const store = configureStore();
 store.dispatch(startLoadEvents());
